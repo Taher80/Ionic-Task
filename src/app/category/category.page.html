@@ -1,0 +1,15 @@
+<ion-content>
+  <ion-toolbar>
+      <div class="icons">
+          <ion-icon name="reorder"></ion-icon>
+          <ion-icon float-right name="cart"></ion-icon>
+          <ion-icon float-right name="search"></ion-icon>
+      </div>
+  </ion-toolbar>
+  <ion-row *ngFor="let category of categories$ | async" (click)="redirectToProdactsPage(category)">
+    <ion-col size="12">
+        <h3 text-center>{{category.name}}</h3> 
+        <img [src]="category.category_img">
+    </ion-col>
+  </ion-row>
+</ion-content>

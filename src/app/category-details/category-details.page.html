@@ -1,0 +1,24 @@
+<ion-content>
+  <ion-toolbar>
+      <div class="icons height">
+          <ion-icon name="reorder"></ion-icon>
+          <ion-icon float-right name="cart"></ion-icon>
+          <ion-icon float-right name="search"></ion-icon>
+      </div>
+  </ion-toolbar>
+  <ion-row>
+    <ion-col *ngFor='let product of products' (click)="toProductPage(product)" size="6">
+        <h3 text-center style="border-bottom: 3px solid pink;">{{product.name}}</h3>
+        <img [src]="product.product_img">
+        <p style="font-weight: bold;">Lorem ipsum dolor</p>
+        <p>{{ product.weight }}</p>
+        <p>{{ product.price }}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <div class="footer">
+      <p>Filter</p>
+      <p>Sory By</p>
+    </div>
+  </ion-row>
+</ion-content>
